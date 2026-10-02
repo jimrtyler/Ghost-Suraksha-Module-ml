@@ -69,7 +69,9 @@ Ghost **16 Windows ശക്തിപ്പെടുത്തൽ പ്രവർ
 ### സുരക്ഷാ മൂല്യനിർണ്ണയം
 ```powershell
 # Ghost മൊഡ്യൂൾ ലോഡ് ചെയ്യുക
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # നിലവിലെ സുരക്ഷാ നിലനിർത്തൽ പരിശോധിക്കുക
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### ഓപ്ഷൻ 1: നേരിട്ടുള്ള ഡൗൺലോഡ് (പരിശോധന)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### ഓപ്ഷൻ 2: മൊഡ്യൂൾ ഇൻസ്റ്റലേഷൻ
